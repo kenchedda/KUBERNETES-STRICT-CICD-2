@@ -26,7 +26,7 @@
               dir('charts') {
                 withCredentials([usernamePassword(credentialsId: 'jfrog', usernameVariable: 'username', passwordVariable: 'password')]) {
                       sh '/usr/local/bin/helm version'
-                      sh '/usr/local/bin/helm repo add default-helm https://kenappiah.jfrog.io/artifactory/default-helm --pass-credentials'
+                      sh '/usr/local/bin/helm repo add default-helm https://kenappiah.jfrog.io/artifactory/default-helm username jnrcheddabob@gmail.com --password Widaad@77'
                       sh "/usr/local/bin/helm repo update"
                       sh "/usr/local/bin/helm install web-dev --namespace dev -f values.yaml ."
                       sh "/usr/local/bin/helm list -a --namespace dev"
