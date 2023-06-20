@@ -9,7 +9,7 @@
     serviceAccount: jenkins-agent-sa
     containers:
     - name: deploy
-      image: kenappiah/build-agent:1.0
+      image: dpthub/jenkins-build-agent:1.0
       command:
       - cat
       tty: true
