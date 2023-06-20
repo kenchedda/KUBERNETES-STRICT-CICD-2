@@ -25,8 +25,8 @@
             container('deploy') {
               dir('charts') {
                 withCredentials([usernamePassword(credentialsId: 'jfrog', usernameVariable: 'username', passwordVariable: 'password')]) {
-                      sh "/usr/local/bin/helm repo update"
                       sh '/usr/local/bin/helm repo add default-helm https://kenappiah.jfrog.io/artifactory/default-helm --username $username --password $password'
+                      sh "/usr/local/bin/helm repo update"
                       sh "/usr/local/bin/helm install web-dev --namespace dev -f values.yaml ."
                       sh "/usr/local/bin/helm list -a --namespace dev"
                 }
