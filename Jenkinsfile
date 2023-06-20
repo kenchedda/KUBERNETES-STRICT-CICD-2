@@ -9,7 +9,7 @@
     serviceAccount: jenkins-agent-sa
     containers:
     - name: deploy
-      image: dpthub/eddeployagent
+      image: kenappiah/build-agent:1.0
       command:
       - cat
       tty: true
@@ -18,7 +18,7 @@
       node (label) {
 
           stage ('Checkout SCM'){
-            git url: 'https://dptrealtime@bitbucket.org/dptrealtime/edweb-login-deployment.git', branch: 'dev'
+            git url: 'https://github.com/kenchedda/KUBERNETES-STRICT-CICD-2.git', branch: 'qa'
           }
 
           stage ('Helm Chart') {
