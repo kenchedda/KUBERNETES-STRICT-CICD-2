@@ -1,6 +1,6 @@
 deployment:
   replicaCount: 1
-  image: dpthub/webapp
+  image: kenappiah/webapp:1.0
 resources:
   requests:
     cpu: "250m"
