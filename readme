@@ -1,0 +1,3 @@
+helm list -n dev
+helm list -n qa 
+to check deployment
